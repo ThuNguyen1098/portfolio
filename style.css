@@ -1,0 +1,477 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: QX Bariol;
+  src: url(QX_Bariol_Serif_Regular.otf);
+}
+
+body {
+  background-color: #DEF5FF;
+}
+/* Menu */
+a {
+  text-decoration: none;
+}
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  box-shadow: -5px -5px 20px #FBFEFF, 5px 5px 20px #B4D1DE;
+}
+.box .main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #DEF5FF;
+  width: 97.5%;
+  height: 96%;
+  border-radius: 20px;
+}
+.main .menu {
+  margin: 15px 40px;
+  overflow: auto;
+}
+.menu #logo{
+  float: left;
+  position: relative;
+  width: 175px;
+  height: 70px;
+}
+.menu #logo .or {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.menu #logo .hov {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.menu #logo:hover .or {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.menu #logo:hover .hov {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.navbar {
+  float: right;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+
+}
+.navbar div {
+  font-size: 24px;
+  font-family: QX Bariol;
+  border-radius: 10px;
+}
+.navbar div:hover {
+  box-shadow: -3px -3px 10px #FBFEFF, 3px 3px 10px #B4D1DE;;
+}
+.navbar a {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  color: #003D57;
+}
+.navbar a:hover {
+  color: #00B1FF;
+}
+
+
+/* Main Content - homepage */
+.intro {
+  margin: 50px 40px;
+  position: relative;
+}
+.intro div {
+  position: absolute;
+  background: white;
+  box-shadow: -4px -4px 10px #FBFEFF, 4px 4px 10px #B4D1DE;
+  border-radius: 20px;
+}
+.intro #cover1, #cover2, #cover3, #cover4 {
+  position:absolute;
+  top: 0;
+  right: 0;
+  background: #DEF5FF;
+  width: 100%;
+  height: 100%;
+}
+.intro #cover1 {
+  background-image: url(pixel.gif);
+}
+.intro #cover2 {
+  background-image: url(mortarboard.gif);
+}
+.intro #cover3 {
+  background-image: url(smiley-face.gif);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.intro #cover4 {
+  background-image: url(computing.gif);
+}
+
+/* hover state - homepage */
+.intro div:hover {
+  box-shadow: inset -4px -4px 10px #ECEEEE, inset 4px 4px 10px #B4D1DE, -4px -4px 10px #FBFEFF, 4px 4px 10px #B4D1DE;
+}
+.intro div:hover #cover1 {
+  width: 100%;
+  height: 0%;
+  box-shadow: none;
+  border-radius: 20px 20px 5px 5px;
+  transition: 0.3s;
+  position:absolute;
+  top: 0;
+}
+.intro div:hover #cover2 {
+  width: 0%;
+  height: 100%;
+  box-shadow: none;
+  border-radius: 20px 5px 5px 20px;
+  transition: 0.3s;
+  position:absolute;
+  left: 0;
+}
+.intro div:hover #cover3 {
+  width: 100%;
+  height: 0%;
+  box-shadow: none;
+  transition: 0.3s;
+  position:absolute;
+  top: 320px;
+}
+.intro div:hover #cover4 {
+  width: 0%;
+  height: 100%;
+  box-shadow: none;
+  transition: 0.3s;
+  position:absolute;
+  right: 0;
+}
+/* inside box - homepage */
+.intro #box1 {
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 450px;
+}
+.intro #box1 #descrip1 {
+  position:relative;
+  margin: 20px;
+  box-shadow: none;
+  background: none;
+  font-family: QX Bariol;
+  font-size: 15px;
+  color: #003D57;
+}
+
+.intro #box2 {
+  top: 0;
+  left: 325px;
+  width: 370px;
+  height: 180px;
+}
+.intro #box2 #descrip2 {
+  position:relative;
+  margin: 20px;
+  box-shadow: none;
+  background: none;
+  font-family: QX Bariol;
+  font-size: 14px;
+  color: #003D57;
+}
+
+.intro #box3 {
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 320px;
+  background-image: url(IMG_6046.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.intro #box4 {
+  left: 325px;
+  top: 210px;
+  width: 370px;
+  height: 240px;
+  background-image: url(software.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.intro #contact {
+  top: 355px;
+  right: 0;
+  width: 320px;
+  height: 95px;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#contact div {
+  position: relative;
+  border-radius: 10px;
+  background-color: #DEF5FF;
+  box-shadow: -4px -4px 10px #FBFEFF, 4px 4px 10px #B4D1DE;
+  width: 95px;
+  height: 95px;
+}
+#contact div:hover {
+  box-shadow: inset -4px -4px 10px #ECEEEE, inset 4px 4px 10px #B4D1DE;
+}
+#contact #box5 img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#contact #box6 img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#contact #box7 img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* ux/ui */
+#ux {
+  background: #DEF5FF;
+  box-shadow: inset -3px -3px 10px #FBFEFF, inset 3px 3px 10px #B4D1DE;
+  border-radius: 10px;
+}
+/* graphics */
+#graphics {
+  background: #DEF5FF;
+  box-shadow: inset -3px -3px 10px #FBFEFF, inset 3px 3px 10px #B4D1DE;
+  border-radius: 10px;
+}
+/* animation */
+#animation {
+  background: #DEF5FF;
+  box-shadow: inset -3px -3px 10px #FBFEFF, inset 3px 3px 10px #B4D1DE;
+  border-radius: 10px;
+}
+/* brands */
+#brands {
+  background: #DEF5FF;
+  box-shadow: inset -3px -3px 10px #FBFEFF, inset 3px 3px 10px #B4D1DE;
+  border-radius: 10px;
+}
+
+/* Projects */
+.projects {
+  margin: 40px 40px 30px 40px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.projects a{
+  color: #000;
+}
+.projects #pro1, #pro2, #pro3, #pro4 {
+  position: relative;
+  width: 230px;
+  height: 340px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: inset -4px -4px 10px #F5F5F5, inset 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.projects .infor {
+  margin: 10px;
+}
+.infor .square {
+  background-color: #F5B257;
+  width: 210px;
+  height: 210px;
+}
+/* projects - ux/ui*/
+.infor .ux01 {
+  width: 210px;
+  height: 210px;
+  background-image: url(ux-01.png);
+  background-position: center;
+  background-size: cover;
+}
+.infor .ux02 {
+  width: 210px;
+  height: 210px;
+  background-image: url(ux-02.png);
+  background-position: center;
+  background-size: cover;
+}
+.infor .ux03 {
+  width: 210px;
+  height: 210px;
+  background-image: url(ux-03.gif);
+  background-position: center;
+  background-size: cover;
+}
+.infor .ux04 {
+  width: 210px;
+  height: 210px;
+  background-image: url(ux-04.png);
+  background-position: center;
+  background-size: cover;
+}
+
+/* projects - graphics*/
+.infor .graphics01 {
+  width: 210px;
+  height: 210px;
+  background-image: url(graphics-01.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.infor .graphics02 {
+  width: 210px;
+  height: 210px;
+  background-image: url(graphics-02.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.infor .graphics03 {
+  width: 210px;
+  height: 210px;
+  background-image: url(graphics-03.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.infor .graphics04 {
+  width: 210px;
+  height: 210px;
+  background-image: url(graphics-04.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* projects - animation*/
+
+/* projects - brands*/
+.infor .brands01 {
+  width: 210px;
+  height: 210px;
+  background-image: url(brands-01.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.infor .brands02 {
+  width: 210px;
+  height: 210px;
+  background-image: url(brands-02.png);
+  background-position: center;
+  background-size: cover;
+}
+.infor .brands03 {
+  width: 210px;
+  height: 210px;
+  background-image: url(brands-03.png);
+  background-position: center;
+  background-size: cover;
+}
+.infor .brands04 {
+  width: 210px;
+  height: 210px;
+  background-image: url(brands-04.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.infor .text {
+  margin: 10px 0px;
+}
+.text h1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.text p {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+/* Projects - Hover state */
+.projects #pro1:hover, #pro2:hover, #pro3:hover, #pro4:hover {
+  box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.25), 8px 9px 25px rgba(0, 0, 0, 0.25);
+}
+
+.others {
+  width: 230px;
+  height: 60px;
+  margin: 0px 40px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  float: right;
+}
+.others div {
+  height: 60px;
+  width: 60px;
+  background: #DEF5FF;
+  box-shadow: -4px -4px 10px #FBFEFF, 4px 4px 10px #B4D1DE;
+  border-radius: 50%;
+}
+
+.others .search {
+  background-image: url(search.png);
+  background-position: center;
+  background-size:contain;
+}
+.others .search:hover {
+  background-image: url(search.png);
+  background-position: center;
+  background-size:contain;
+  background-color: white;
+}
+
+.others .mail img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.others .mail:hover {
+  background-color: white;
+}
+
+.others .home img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.others .home:hover {
+  background-color: white;
+}
